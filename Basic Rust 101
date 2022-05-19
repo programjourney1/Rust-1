@@ -1,0 +1,82 @@
+fn main(){    //create function
+    let letter = "c"; //argument for funct
+    let numb = 10;
+    let is_true: bool = true //boolean
+    println!(numb, letter); //println! is macro command prints to console
+}
+
+//arrays
+fn main() {
+    let arr: [u8;3] = [1,2,3]; //u8 is bit size or just arr={0,1,2];}
+    let other_arr: [u8;5] = [100;5]; //slice is [1 .. 7] dont need to know middle
+    println! ("index: {}, length: {}", arr[0], other_arr.len()); //len = length
+    println! ("{:?}", other_array); //{:?} is print whoel array
+
+    //tuple, can hold many elements and of diff types. no need to define types if want
+    let tuple: (u8,bool,f2) = (5,true,2.1);
+    let tuple2 = (3,5);
+    println! ("first {}, Second {}, Third {}". tuple.0, tuple.1, tuple.2); //use dot to call
+
+}
+
+//functions
+fn main() {
+    println!("{}", is_even(2));
+}
+pub fn is_even(num: u8) -> bool { //pub makes public
+    let digit: u8 = num % 2:
+    digit == 0 // usually need ; unless return value of function
+}
+
+// if you want to make something mutable
+fn main (){
+    let mut numb = 5;
+    numb = 3;
+    //to create string object
+    let string: String = String::from("hello planet");
+    let slice = &string[.. 2];
+// will get string up to position 2
+    string.replace("planet", "universe"); //replace function
+    // some functions: len, push = add, replace
+}
+
+//LOOPS!
+fn main() {
+    let n = 3;
+    if n>0 {  // can use for loop as well, or while
+        println!("positive number");
+    } else if n< 0 {
+        println!("negative number");
+    } else {
+        println!("is zero");
+    }
+}  //basic + or - loop
+
+//struct
+fn main () {
+    let name = String::from ("Bird"); //to make sure string is called for same name Bird
+    let bird = Bird {name: "Bird", attack: 5};
+}
+struct Bird {
+    name: String,
+    attack: u64
+}
+impl Bird {  //implement struct
+    fn print_name(&self){
+        println!("{}", self.name );
+    }
+}
+
+//OOP
+fn main () {
+    let name = String::from ("Bird"); //to make sure string is called for same name Bird
+    let bird = Bird {name: "Bird", attack: 5};
+}
+impl Bird { //implement the trait
+   
+}
+trait Bird {  //oop
+    fn print_name(&self){
+        println!("{}", self.name );
+    }
+}
